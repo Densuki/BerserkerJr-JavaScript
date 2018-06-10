@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
     coins: pCoins + parseInt(args[1])
   };
 
-  message.channel.send(`${message.author} tem dado ${pUser} ${args[1]} moedas.`);
+  message.channel.send(`${message.author} deu ao jogador ${pUser} ${args[1]} moedas.`);
 
   fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
     if(err) cosole.log(err)
