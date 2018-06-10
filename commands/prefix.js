@@ -4,7 +4,7 @@ const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
 
-  if(!message.member.hasPermission("MANAGE_SERVER")) return message.reply("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!.").then(msg => msg.delete(5000));
+  if(!message.member.hasPermission("MANAGE_SERVER")) return message.reply("Você não pode fazer isso!.").then(msg => msg.delete(5000));
   if(!args[0] || args[0 == "help"]) return message.reply("Usage: %prefix <prefixo desejado aqui>. Exemplo: `%prefix #`");
 
   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));

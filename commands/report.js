@@ -6,11 +6,11 @@ module.exports.run = async (bot, message, args) => {
 
 
     if (args[0] == "help"){
-      message.reply("use: %report <user> <motivo>\n\n exemplo: `%report @zayron Por ser um humano perfeito!`").then(msg => msg.delete(5000));
+      message.reply("use: %report <user> <motivo>\n\n exemplo: `%report @DinoSPACE#1842 Por ser um mestre perfeito!`").then(msg => msg.delete(5000));
       return;
     }
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if (!rUser) return message.channel.send("http://prntscr.com/jpmc6o Não foi possível encontrar o usuário.").then(msg => msg.delete(5000));
+    if (!rUser) return message.channel.send("Não foi possível encontrar o usuário.").then(msg => msg.delete(5000));
     let reason = args.join(" ").slice(22);
 
     let reportEmbed = new Discord.RichEmbed()
@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
     let reportschannel = message.guild.channels.find(`name`, "reports");
     //Nome do canal (acho que ele cria o canal 🤔)
-    if(!reportschannel) return message.channel.send("http://prntscr.com/jpmc6o não foi possível encontrar o canal de relatórios|Reports.");
+    if(!reportschannel) return message.channel.send("não foi possível encontrar o canal de relatórios|Reports.");
 
 
     message.delete().catch(O_o=>{});

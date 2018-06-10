@@ -41,7 +41,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} Estar Online em ${bot.guilds.size} server(s)!`);
 
-  bot.user.setActivity("Nada🤔Mas meu prefix é % 😅", {type: "PLAYING"});
+  bot.user.setActivity("meu prefix é #", {type: "PLAYING"});
 
   //bot.user.setGame("on SourceCade!");
 

@@ -5,8 +5,8 @@ module.exports.run = async (bot, message, args) => {
 //PERMISSÕES
 //==============================================================
 
-  if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!.").then(msg => msg.delete(5000));
-  if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!.").then(msg => msg.delete(5000));
+  if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply("Você não pode fazer isso!.").then(msg => msg.delete(5000));
+  if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("Você não pode fazer isso!.").then(msg => msg.delete(5000));
 
 //==============================================================
 //EMBED
